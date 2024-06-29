@@ -4,6 +4,7 @@ const app = express();
 const estudiantesRoutes = require('./routes/estudiantesRoutes.js');
 const profesoresRoutes = require('./routes/profesoresRoutes.js');
 const cursosRoutes = require('./routes/cursosRoutes.js');
+require('dotenv').config({path:'./.env'})
 
 app.use(express.json());
 app.use(cors());
@@ -16,8 +17,6 @@ app.use("/estudiantes", estudiantesRoutes);
 app.use("/profesores", profesoresRoutes);
 app.use("/cursos", cursosRoutes);
 
-
-PUERTO=6500
-app.listen(PUERTO, () => {
-    console.log(`Servidor activo en localhost:${PUERTO}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Servidor activo en localhost:${process.env.PORT}`);
 });
