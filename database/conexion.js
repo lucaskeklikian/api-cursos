@@ -3,11 +3,11 @@ require('dotenv').config({path:'./.env'})
 
 const db = mysql.createConnection(
     {
-        host:'mysql-lhk.alwaysdata.net',//process.env.DB_HOST,
-        user:'lhk_free',//process.env.DB_USER,
-        password:'alwaysdata123db',//process.env.DB_PASS,
-        database:'lhk_cursos',//process.env.DB_NAME,
-        port:3306 //process.env.DB_PORT || 3307 //agrego pipe como ej para q tome un valor si no esta definida la var de entorno 
+        host:process.env.DB_HOST,
+        user:process.env.DB_USER,
+        password:process.env.DB_PASS,
+        database:process.env.DB_NAME,
+        port: process.env.DB_PORT 
     }
 );
 
