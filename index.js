@@ -10,13 +10,15 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hola mundo, servidor node.js/express');
+    res.send('Servidor node.js/express para API de Cursos');
 });
 
 app.use("/estudiantes", estudiantesRoutes);
 app.use("/profesores", profesoresRoutes);
 app.use("/cursos", cursosRoutes);
 
-app.listen(process.env.PORT, () => {
-    console.log(`Servidor activo en localhost:${process.env.PORT}`);
+PORT=process.env.PORT || 6500
+
+app.listen(PORT, () => {
+    console.log(`Servidor activo en http://localhost:${PORT}`);
 });
