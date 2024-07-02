@@ -1,24 +1,24 @@
-const mysql = require('mysql2')
-require('dotenv').config({path:'./.env'})
+// const mysql = require('mysql2')
+// require('dotenv').config({path:'./.env'})
 
-const db = mysql.createConnection(
-    {
-        host:process.env.DB_HOST,
-        user:process.env.DB_USER,
-        password:process.env.DB_PASS,
-        database:process.env.DB_NAME,
-        port: process.env.DB_PORT || 3307 //agrego pipe como ej para q tome un valor si no esta definida la var de entorno 
-    }
-);
+// const db = mysql.createConnection(
+//     {
+//         host:process.env.DB_HOST,
+//         user:process.env.DB_USER,
+//         password:process.env.DB_PASS,
+//         database:process.env.DB_NAME,
+//         port: process.env.DB_PORT || 3307 //agrego pipe como ej para q tome un valor si no esta definida la var de entorno 
+//     }
+// );
 
-db.connect((err)=>{
-    if(err){
-        throw err;
-    }
-    console.log('Base de datos conectada')
-});
+// db.connect((err)=>{
+//     if(err){
+//         throw err;
+//     }
+//     console.log('Base de datos conectada')
+// });
 
-module.exports = db;
+// module.exports = db;
 
 //##################################### Ejemplos creacion en db SQL #####################################
 // CREATE TABLE cursos_estudiantes(

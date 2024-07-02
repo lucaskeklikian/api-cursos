@@ -1,4 +1,4 @@
-const db = require('../database/conexion.js');
+//const db = require('../database/conexion.js');
 
 class CursosController {
     consultar(req, res) {
