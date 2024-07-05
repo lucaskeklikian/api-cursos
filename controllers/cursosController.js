@@ -108,6 +108,21 @@ class CursosController {
             res.status(500).send(err.message);
         }
      }
+
+     consultar_cursos_estudiantes(req, res) {
+            try {
+                db.query(`SELECT * FROM cursos_estudiantes`,
+                    (err, rows) => {
+                        if (err) {
+                            res.status(400).send(err);
+                        }
+                        res.status(200).json(rows);
+                    });
+            } catch (err) {
+                res.status(500).send(err.message);
+            }
+        }
+    
 }
 
 module.exports = new CursosController();
