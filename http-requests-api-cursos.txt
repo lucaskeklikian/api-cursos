@@ -1,0 +1,122 @@
+SERVIDOR ALWAYSDATA
+####################################################################################### GET ####################################################################################################################
+
+http://lhk.alwaysdata.net/estudiantes
+
+http://lhk.alwaysdata.net/profesores
+
+http://lhk.alwaysdata.net/cursos
+
+http://lhk.alwaysdata.net/cursos/estudiantes 
+
+####################################################################################### POST ####################################################################################################################
+
+http://lhk.alwaysdata.net/estudiantes
+
+	body >> raw 
+	
+	ejemplo:
+	{
+		"dni" : "38888888",
+		"nombre" : "Carla",
+		"apellido" : "Salas",
+		"email" : "csalas@gmail.com"
+	}
+
+
+http://lhk.alwaysdata.net/profesores
+
+	body >> raw 
+	
+	ejemplo:
+
+	{
+		"dni": "40999888",
+		"nombre": "German",
+		"apellido": "Eter",
+		"email": "geter@gmail.com",
+		"profesion": "quimico",
+		"telefono": "1149909899"
+	}
+
+http://lhk.alwaysdata.net/cursos
+
+
+	body >> raw
+	
+	ejemplo:
+
+	{
+		
+		"nombre": "Node - Express",
+		"descripcion": "Relizacion de API REST",
+		"profesor_id": 7
+		  
+	}
+
+http://lhk.alwaysdata.net/cursos/registraEstudiante 
+
+	body >> raw 
+	
+	ejemplo:
+
+	{
+		"curso_id":1,
+		"estudiante_id":5
+		  
+	}
+	
+####################################################################################### PUT ####################################################################################################################
+
+http://lhk.alwaysdata.net/estudiantes/{id}
+
+	ejemplo:
+	http://lhk.alwaysdata.net/estudiantes/{1}
+
+	body >> raw 
+	{
+		"dni": "33890678",
+		"nombre": "Pablo",
+		"apellido": "Sensi",
+		"email": "psensi@gmail.com"
+	}
+
+
+http://lhk.alwaysdata.net/profesores/{id}
+
+	ejemplo:
+	http://lhk.alwaysdata.net/profesores/{7}
+
+	body >> raw 
+	{
+		"dni": "33777888",
+		"nombre": "Guido",
+		"apellido": "Rex",
+		"email": "grex@gmail.com",
+		"profesion": "biologo",
+		"telefono": "117890999"
+	}
+
+http://lhk.alwaysdata.net/cursos/{id}
+
+	ejemplo:
+	http://lhk.alwaysdata.net/cursos/{1}
+
+	body >> raw
+
+	{
+		
+		"nombre": "Node - Express",
+		"descripcion": "Relizacion de API REST",
+		"profesor_id": 7
+		  
+	}
+
+####################################################################################### DELETE ####################################################################################################################
+
+http://lhk.alwaysdata.net/estudiantes/{id}
+
+http://lhk.alwaysdata.net/profesores/{id}
+
+http://lhk.alwaysdata.net/cursos/{id}
+
